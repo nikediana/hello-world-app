@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 
@@ -45,6 +46,16 @@ export default function Home() {
           <li key={item.id}>{item.text}</li>
         ))}
       </ul>
+
+      <div className="mt-8">
+        <Link
+          href="/page2"
+          className="rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
+        >
+          Mama go go go!
+        </Link>
+      </div>
+
     </main>
   );
 }
